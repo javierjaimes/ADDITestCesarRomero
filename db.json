@@ -1,0 +1,44 @@
+{
+  "data": [
+    {
+      "firstName": "Alfonso ",
+      "lastName": "Coheman ",
+      "email": "example1@gmai.com",
+      "celphone": 123456789,
+      "birthdate": "1985-01-02",
+      "id": 757.6384488070256,
+      "nationalRegistry": true,
+      "judicialRecords": false
+    },
+    {
+      "firstName": "Tecatico",
+      "lastName": "Fernandez",
+      "email": "example2@gmail.com",
+      "celphone": 789456123,
+      "birthdate": "1986-02-15",
+      "id": 359.46277534374957,
+      "nationalRegistry": true,
+      "judicialRecords": false
+    },
+    {
+      "firstName": "Mariam",
+      "lastName": "Leman",
+      "email": "example3@gmail.com",
+      "celphone": 654987123,
+      "birthdate": "2000-06-04",
+      "id": 666.3716435835538,
+      "nationalRegistry": false,
+      "judicialRecords": false
+    },
+    {
+      "firstName": "Alejandro ",
+      "lastName": "Salazar",
+      "email": "example4@gmail.com",
+      "celphone": 48912324,
+      "birthdate": "1999-12-12",
+      "id": 453.1098752935436,
+      "nationalRegistry": true,
+      "judicialRecords": false
+    }
+  ]
+}

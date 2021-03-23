@@ -1,0 +1,65 @@
+.backgorund
+  position: fixed
+  width: 100%
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  background: #000
+  opacity: 0.5
+  top: 0
+  bottom: 0
+  right: 0
+  left: 0
+
+.title
+  font-size: 24px
+  font-weight: bold
+
+.modal
+  position: fixed
+  top: 30%
+  left: 36%
+  z-index: 3
+  padding: 16px
+  box-shadow: 0 5px 15px 0 #ccc
+  background: white
+  border-radius: 8px
+  width: 400px
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+.form
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  justify-content: center
+  width: 100%
+  .input
+    width: 100%
+    margin-top: 16px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: 18px
+    input
+      height: 24px
+      border-radius: 8px
+      &:focus
+        outline: none
+    .date
+      width: 172px
+  .buttons
+    margin-top: 16px
+    width: 100%
+    display: flex
+    justify-content: center
+    button
+      &:first-child
+        margin-right: 16px
+
+.title
+  font-size: 24px
+  font-weight: bold

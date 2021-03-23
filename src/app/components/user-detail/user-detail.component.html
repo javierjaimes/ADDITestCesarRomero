@@ -1,0 +1,53 @@
+<ng-container *ngIf="lead">
+  <div class="container">
+    <div class="photo">
+      <img [src]="photo">
+    </div>
+    <div class="card">
+      <div class="body">
+        <div class="info">
+          <div class="input">
+            <i class="fas fa-user"></i>
+            <span class="label">Name:</span>
+            <span class="text">{{lead.firstName}} {{lead.lastName}}</span>
+          </div>
+          <div class="input">
+            <i class="fas fa-envelope-open-text"></i>
+            <span class="label">Email:</span>
+            <span class="text"> {{lead.email}} </span>
+          </div>
+          <div class="input">
+            <i class="fas fa-phone"></i>
+            <span class="label">Telephone:</span>
+            <span class="text"> {{lead.celphone}} </span>
+          </div>
+          <div class="input">
+            <i class="fas fa-birthday-cake"></i>
+            <span class="label">Birthdate:</span>
+            <span class="text"> {{lead.birthdate}} </span>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <button class="btn btn-close" (click)="goBack()">back</button>
+        <button class="btn btn-create" (click)="check(lead)" [disabled]="showMessage">Check</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <ng-container *ngIf="showMessage">
+      <div class="message">
+        <ng-container *ngIf="response; else failure">
+          <ng-template [ngTemplateOutlet]="success"></ng-template>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</ng-container>
+
+<ng-template #success>
+  <span>Congratulation! You are a new Lead!</span>
+</ng-template>
+<ng-template #failure>
+  <span>Sorry! Try again</span>
+</ng-template>

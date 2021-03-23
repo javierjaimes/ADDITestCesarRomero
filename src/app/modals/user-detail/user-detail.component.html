@@ -1,0 +1,47 @@
+<div class="backgorund" (click)="closeModal.emit()"></div>
+<div class="modal">
+  <ng-container *ngIf="isCreate; else isTitleUpdate">
+    <ng-template [ngTemplateOutlet]="isTitleCreate"></ng-template>
+  </ng-container>
+  <form class="form" [formGroup]="form">
+    <div class="input">
+      <label>First Name</label>
+      <input type="text" formControlName="firstName">
+    </div>
+    <div class="input">
+      <label>Last Name</label>
+      <input type="text" formControlName="lastName">
+    </div>
+    <div class="input">
+      <label>Email</label>
+      <input type="email" formControlName="email">
+    </div>
+    <div class="input">
+      <label>Celphone</label>
+      <input type="number" formControlName="celphone">
+    </div>
+    <div class="input">
+      <label>Birthdate</label>
+      <input class="date" type="date" formControlName="birthdate">
+    </div>
+    <div class="buttons">
+      <ng-container *ngIf="isCreate; else updateLead">
+        <ng-template [ngTemplateOutlet]="createLead"></ng-template>
+      </ng-container>
+      <button class="btn btn-close" (click)="closeModal.emit()">Close</button>
+    </div>
+  </form>
+</div>
+
+<ng-template #createLead>
+  <button class="btn btn-create" (click)="save()">Create</button>
+</ng-template>
+<ng-template #updateLead>
+  <button class="btn btn-create" (click)="updateData()">Update</button>
+</ng-template>
+<ng-template #isTitleCreate>
+  <span class="title">Create Lead</span>
+</ng-template>
+<ng-template #isTitleUpdate>
+  <span class="title">Update Lead</span>
+</ng-template>

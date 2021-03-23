@@ -1,0 +1,15 @@
+<div class="container">
+  <span class="title">List leads</span>
+  <button class="btn btn-create" (click)="createLead()">Create lead</button>
+  <ng-container *ngFor="let lead of leads">
+    <app-card 
+      [lead]="lead" 
+      (refreshList)="refreshList()"
+      (updateLead)="updateLead($event)">
+    </app-card>
+  </ng-container>
+</div>
+
+<ng-container *ngIf="showModal">
+  <app-user-detail-modal (closeModal)="updateList()" [update]="idUpdate"></app-user-detail-modal>
+</ng-container>

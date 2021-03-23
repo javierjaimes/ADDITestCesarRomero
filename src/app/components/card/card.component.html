@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="content">
+    <div class="photo">
+      <img [src]="photo">
+    </div>
+    <div class="info">
+      <span> {{lead.firstName}} {{lead.lastName}} </span>
+      <span> {{lead.email}} </span>
+      <span> {{lead.celphone}} </span>
+    </div>
+    <div class="icon" (click)="leadDetail(lead.id)">
+      <i class="fas fa-chevron-right"></i>
+    </div>
+  </div>
+  <div class="options">
+    <span class="btn btn-create" (click)="updateLead.emit(lead.id)">Update</span>
+    <span class="btn btn-close" (click)="deleteLead(lead.id)">Delete</span>
+  </div>
+</div>
